@@ -151,11 +151,34 @@ def main():
     nf = (SRC / "partials" / "404.html").read_text(encoding="utf-8")
     (OUT / "404.html").write_text(render_tokens(nf.replace("{{base}}", BASE)), encoding="utf-8")
 
+    # заглушки со старых адресов Creatium (GitHub Pages не умеет настоящие 301):
+    # мгновенная переадресация + canonical на новый адрес; якоря старой страницы переносим на новые блоки
+    import json as _json
+    redirects = SITE.get("redirects", {})
+    anchors = SITE.get("redirect_anchors", {})
+    for old, new in redirects.items():
+        dest = BASE + new
+        dest_abs = DOMAIN + new
+        amap = _json.dumps(anchors.get(old, {}), ensure_ascii=False)
+        stub = (
+            '<!doctype html><html lang="es"><head><meta charset="utf-8">'
+            '<script>(function(){var m=%s,h=location.hash;location.replace("%s"+(m[h]||""));})();</script>'
+            '<title>Esta página se ha movido | Dominion Enterprises</title>'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<link rel="canonical" href="%s"><meta http-equiv="refresh" content="0;url=%s">'
+            '</head><body><p>Esta página se ha movido. <a href="%s">Continuar</a>.</p></body></html>'
+        ) % (amap, dest, dest_abs, dest, dest)
+        t = OUT / old.strip("/") / "index.html"
+        t.parent.mkdir(parents=True, exist_ok=True)
+        t.write_text(stub, encoding="utf-8")
+
     # sitemap и robots
     urls = "".join("<url><loc>%s%s</loc></url>" % (DOMAIN, p["slug"]) for p in pages if p.get("sitemap", "yes") == "yes")
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>\n' % urls, encoding="utf-8")
     if PROD:
-        robots_txt = "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % DOMAIN
+        bots = ["Googlebot", "Bingbot", "OAI-SearchBot", "GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]
+        robots_txt = "".join("User-agent: %s\nAllow: /\n\n" % b for b in bots)
+        robots_txt += "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % DOMAIN
     else:
         robots_txt = "User-agent: *\nDisallow: /\n"
     (OUT / "robots.txt").write_text(robots_txt, encoding="utf-8")

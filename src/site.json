@@ -11,5 +11,21 @@
   "phone_wa": "34685331311",
   "maps_url": "https://www.google.com/maps/search/?api=1&query=Dominion+Enterprises+SL+Calle+Pino+2A+Alicante",
   "ga_id": "G-7TTWTYKMLQ",
-  "og_image": "puente-elevador.webp"
+  "og_image": "puente-elevador.webp",
+  "redirects": {
+    "/auto_repair-es": "/",
+    "/shinomontazh-es": "/neumaticos/",
+    "/arenda-podemnika-es": "/puente-elevador/"
+  },
+  "redirect_anchors": {
+    "/auto_repair-es": {
+      "#steps": "#como-trabajamos",
+      "#Remont_es": "#que-hacemos",
+      "#Contakt_es": "#contacto",
+      "#reviews_es": "#opiniones",
+      "#price": "#servicios",
+      "#servis": "#servicios",
+      "#renovar_es": ""
+    }
+  }
 }
