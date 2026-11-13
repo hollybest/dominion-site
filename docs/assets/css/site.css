@@ -219,3 +219,10 @@ p{margin:0}
   .ck-act{justify-content:flex-end}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+
+/* fotos en tarjetas y bloques */
+.tile.has-img{padding:0;overflow:hidden;align-items:stretch}
+.tile.has-img>img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.tile.has-img .tb{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:22px 24px 26px}
+.side-img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);margin-top:30px}
+.works.one{grid-template-columns:1fr}

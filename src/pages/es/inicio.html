@@ -23,7 +23,7 @@ service: remont
       </div>
     </div>
     <aside class="card">
-      <img class="card-img" src="@/assets/img/taller.webp" alt="Mecánico junto a una furgoneta elevada en el taller de C. Pino 2A, Alicante" width="1200" height="750" fetchpriority="high">
+      <img class="card-img" src="@/assets/img/diagnostico-hero.webp" alt="Mecánico midiendo con un polímetro y un portátil de diagnóstico bajo el capó de un coche" width="1200" height="750" fetchpriority="high">
       <div class="card-body">
         <p class="card-k">Dónde estamos</p>
         <dl class="rows">
@@ -52,10 +52,10 @@ service: remont
     <p class="eyebrow">Taller mecánico</p>
     <h2 class="h2">Nuestros servicios</h2>
     <div class="grid g4">
-      <div class="tile"><h3>Diagnóstico del coche</h3><p>Antes de reparar hay que saber qué le pasa al coche. Lo revisamos, te explicamos qué avería tiene y qué hay que hacer.</p><a class="more dm-wa" href="[[wa:¡Hola! Quiero pedir cita para un diagnóstico del coche.]]" target="_blank" rel="noopener">Pedir diagnóstico</a></div>
-      <div class="tile"><h3>Neumáticos y pinchazos</h3><p>Cambio de neumáticos a 15 € por rueda, con el equilibrado incluido. También arreglamos pinchazos y reparamos ruedas.</p><a class="more" href="@/neumaticos/">Ver neumáticos</a></div>
-      <div class="tile"><h3>Mantenimiento</h3><p>Cambiamos los consumibles, revisamos todos los sistemas del coche y sustituimos lo que haga falta.</p><a class="more" href="#que-hacemos">Qué hacemos</a></div>
-      <div class="tile"><h3>Reparación completa</h3><p>Desde chapa y carrocería (sin pintura) hasta mecánica: motor, suspensión y frenos. Tu coche, en manos de gente que sabe.</p><a class="more" href="#que-hacemos">Qué hacemos</a></div>
+      <div class="tile has-img"><img src="@/assets/img/taller-bajos.webp" alt="Mecánicos revisando los bajos de un coche subido al puente elevador" width="720" height="480" loading="lazy"><div class="tb"><h3>Diagnóstico del coche</h3><p>Antes de reparar hay que saber qué le pasa al coche. Lo revisamos, te explicamos qué avería tiene y qué hay que hacer.</p><a class="more dm-wa" href="[[wa:¡Hola! Quiero pedir cita para un diagnóstico del coche.]]" target="_blank" rel="noopener">Pedir diagnóstico</a></div></div>
+      <div class="tile has-img"><img src="@/assets/img/neumaticos.webp" alt="Mecánico cambiando una rueda" width="640" height="487" loading="lazy"><div class="tb"><h3>Neumáticos y pinchazos</h3><p>Cambio de neumáticos a 15 € por rueda, con el equilibrado incluido. También arreglamos pinchazos y reparamos ruedas.</p><a class="more" href="@/neumaticos/">Ver neumáticos</a></div></div>
+      <div class="tile has-img"><img src="@/assets/img/mantenimiento.webp" alt="Bajos de un coche en un puente elevador durante una revisión" width="720" height="480" loading="lazy"><div class="tb"><h3>Mantenimiento</h3><p>Cambiamos los consumibles, revisamos todos los sistemas del coche y sustituimos lo que haga falta.</p><a class="more" href="#que-hacemos">Qué hacemos</a></div></div>
+      <div class="tile has-img"><img src="@/assets/img/carroceria.webp" alt="Herramienta para reparar una abolladura en la chapa de un coche" width="720" height="480" loading="lazy"><div class="tb"><h3>Reparación completa</h3><p>Desde chapa y carrocería (sin pintura) hasta mecánica: motor, suspensión y frenos. Tu coche, en manos de gente que sabe.</p><a class="more" href="#que-hacemos">Qué hacemos</a></div></div>
     </div>
   </div>
 </section>
@@ -77,11 +77,15 @@ service: remont
 </section>
 
 <section class="sec" id="que-hacemos">
-  <div class="wrap">
-    <p class="eyebrow">Qué hacemos</p>
-    <h2 class="h2">¿Tu coche necesita una reparación urgente?</h2>
-    <div class="btn-row"><a class="btn btn-red dm-wa" href="[[wa:¡Hola! Quiero pedir cita para un diagnóstico del coche.]]" target="_blank" rel="noopener">[[icon:wa]]Pedir diagnóstico</a></div>
-    <ul class="works">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Qué hacemos</p>
+      <h2 class="h2">¿Tu coche necesita una reparación urgente?</h2>
+      <div class="btn-row"><a class="btn btn-red dm-wa" href="[[wa:¡Hola! Quiero pedir cita para un diagnóstico del coche.]]" target="_blank" rel="noopener">[[icon:wa]]Pedir diagnóstico</a></div>
+      <img class="side-img" src="@/assets/img/frenos.webp" alt="Mecánico cambiando las pastillas de freno de un disco" width="720" height="480" loading="lazy">
+    </div>
+    <div>
+      <ul class="works one" style="margin-top:0">
       <li><b>Reparación de frenos</b><span>Empezamos con una revisión a fondo: inspección visual y búsqueda de fallos bajo carga. ¡Lo revisamos y lo arreglamos todo!</span></li>
       <li><b>Revisión de la caja de cambios</b><span>Nuestros mecánicos revisan la caja de cambios al detalle y localizan las piezas que dan problemas para solucionar la avería de tu coche.</span></li>
       <li><b>Alineación y equilibrado</b><span>Comprobamos la alineación y el equilibrado de las ruedas con equipo computerizado.</span></li>
@@ -89,7 +93,8 @@ service: remont
       <li><b>Diagnóstico y limpieza de inyectores</b><span>Con un líquido especial y un equipo que lo lleva hasta los inyectores, limpiamos a fondo el sistema de inyección.</span></li>
       <li><b>Cambio de aceite y mantenimiento</b><span>Cambiamos el aceite y los filtros y revisamos el coche para que siga en buen estado.</span></li>
     </ul>
-    <p class="note">Esta no es la lista completa: hacemos mucho más para el mantenimiento de tu coche.</p>
+      <p class="note">Esta no es la lista completa: hacemos mucho más para el mantenimiento de tu coche.</p>
+    </div>
   </div>
 </section>
 
