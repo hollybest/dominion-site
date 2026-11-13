@@ -162,7 +162,7 @@ def main():
         amap = _json.dumps(anchors.get(old, {}), ensure_ascii=False)
         stub = (
             '<!doctype html><html lang="es"><head><meta charset="utf-8">'
-            '<script>(function(){var m=%s,h=location.hash;location.replace("%s"+(m[h]||""));})();</script>'
+            '<script>(function(){var m=%s,h=location.hash;location.replace("%s"+location.search+(m[h]||""));})();</script>'
             '<title>Esta página se ha movido | Dominion Enterprises</title>'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<link rel="canonical" href="%s"><meta http-equiv="refresh" content="0;url=%s">'
