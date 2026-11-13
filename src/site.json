@@ -1,0 +1,15 @@
+{
+  "name": "Dominion Enterprises SL",
+  "domain": "https://dominion-enterprises-sl.com",
+  "test_base": "/dominion-site",
+  "street": "C. Pino, 2A",
+  "postal": "03006",
+  "city": "Alicante",
+  "email": "admin@dominion-enterprises-sl.com",
+  "phone_display": "+34 685 33 13 11",
+  "phone_tel": "+34685331311",
+  "phone_wa": "34685331311",
+  "maps_url": "https://www.google.com/maps/search/?api=1&query=Dominion+Enterprises+SL+Calle+Pino+2A+Alicante",
+  "ga_id": "G-7TTWTYKMLQ",
+  "og_image": "puente-elevador.webp"
+}

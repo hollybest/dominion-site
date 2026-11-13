@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+{{robots}}
+<link rel="canonical" href="{{canonical}}">
+<link rel="alternate" hreflang="es" href="{{canonical}}">
+<link rel="alternate" hreflang="x-default" href="{{canonical}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dominion Enterprises SL">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_image}}">
+<meta name="theme-color" content="#1a2029">
+<link rel="icon" href="@/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="@/assets/fonts/raleway-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="@/assets/css/site.css">
+{{css_extra}}
+<script type="application/ld+json">{{schema}}</script>
+<script>
+/* Consent Mode v2: por defecto todo denegado hasta que el visitante acepte. La analítica solo se carga en el dominio real. */
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{var c=localStorage.getItem('dm_consent');if(c==='granted'){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}}catch(e){}
+gtag('js',new Date());
+</script>
+</head>
+<body data-service="{{service}}" data-analytics="{{analytics}}" data-ga="{{ga_id}}">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+{{header}}
+<main id="contenido">
+{{body}}
+</main>
+{{footer}}
+<div class="mbar" aria-label="Contacto rápido">
+  <a class="dm-wa" href="[[wa:¡Hola! Quiero pedir cita.]]" target="_blank" rel="noopener">[[icon:wa]]WhatsApp</a>
+  <a class="dm-tel" href="tel:{{phone_tel}}">[[icon:phone]]Llamar</a>
+</div>
+{{cookie}}
+<script src="@/assets/js/site.js" defer></script>
+</body>
+</html>
