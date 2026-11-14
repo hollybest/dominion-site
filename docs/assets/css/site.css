@@ -226,3 +226,6 @@ p{margin:0}
 .tile.has-img .tb{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:22px 24px 26px}
 .side-img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);margin-top:30px}
 .works.one{grid-template-columns:1fr}
+.card-wide{display:grid;grid-template-columns:1.1fr .9fr;align-items:center}
+.card-wide .card-img{height:100%;aspect-ratio:auto;object-fit:cover}
+@media(max-width:860px){.card-wide{grid-template-columns:1fr}.card-wide .card-img{aspect-ratio:3/2;height:auto}}
