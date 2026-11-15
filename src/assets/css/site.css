@@ -232,3 +232,6 @@ p{margin:0}
 .fig{margin:36px 0 0;max-width:960px}
 .vid{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:var(--r);background:#000}
 .fig figcaption{margin-top:10px;font-size:14px;color:var(--muted,#5b6470)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.gal img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+@media(max-width:860px){.gal{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px}.gal img{scroll-snap-align:start}}
