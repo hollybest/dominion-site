@@ -37,7 +37,7 @@ def render_tokens(s):
     s = re.sub(r"\[\[wa:(.*?)\]\]", lambda m: wa_url(m.group(1)), s)
     s = re.sub(r"\[\[icon:(\w+)\]\]", lambda m: ICONS[m.group(1)], s)
     s = s.replace('"@/', '"%s/' % BASE).replace("'@/", "'%s/" % BASE)
-    s = s.replace("{{maps}}", SITE["maps_url"])
+    s = s.replace("{{maps}}", SITE["maps_url"]).replace("{{maps_embed}}", SITE["maps_embed"])
     for k in ("phone_display", "phone_tel", "email", "street", "postal", "city", "name"):
         s = s.replace("{{%s}}" % k, SITE[k])
     return s

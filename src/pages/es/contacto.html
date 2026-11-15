@@ -27,6 +27,14 @@ service: contacto
         <a class="btn btn-line dm-map" href="{{maps}}" target="_blank" rel="noopener">[[icon:pin]]Cómo llegar</a>
       </div>
     </div>
+    <div class="mapbox" style="margin-top:24px" data-map="{{maps_embed}}">
+      <div class="mapbox-in">
+        <span class="mapbox-pin">[[icon:pin]]</span>
+        <p><b>{{street}}, {{postal}} {{city}}</b></p>
+        <button type="button" class="btn btn-dark" data-map-load>Ver mapa</button>
+        <small>Al pulsar, se carga el mapa de Google Maps.</small>
+      </div>
+    </div>
   </div>
 </section>
 

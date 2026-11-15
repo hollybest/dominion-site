@@ -235,3 +235,11 @@ p{margin:0}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .gal img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
 @media(max-width:860px){.gal{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px}.gal img{scroll-snap-align:start}}
+/* mapa con carga bajo petición */
+.mapbox{position:relative;border-radius:var(--r);overflow:hidden;min-height:320px;background:#e8ecef;background-image:linear-gradient(#fff9 2px,transparent 2px),linear-gradient(90deg,#fff9 2px,transparent 2px),linear-gradient(#fff6 1px,transparent 1px),linear-gradient(90deg,#fff6 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px}
+.mapbox-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:20px}
+.mapbox-in p{margin:0}.mapbox-in small{color:#5b6470}
+.mapbox-pin{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--red,#f20d0d);color:#fff}
+.mapbox-pin svg{width:26px;height:26px}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cta+.mapbox{margin-top:24px}

@@ -55,4 +55,21 @@
     if (window.gtag) window.gtag("event", name, { service: service });
     (window.dataLayer = window.dataLayer || []).push({ event: name + "_dm", service: service });
   });
+
+  /* Mapa de Google Maps: solo se carga al pulsar (privacidad y velocidad). Evento propio, distinto de map_click. */
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest("[data-map-load]");
+    if (!btn) return;
+    var box = btn.closest(".mapbox");
+    if (!box || box.querySelector("iframe")) return;
+    var f = document.createElement("iframe");
+    f.src = box.getAttribute("data-map");
+    f.title = "Mapa: Dominion Enterprises SL, C. Pino 2A, Alicante";
+    f.loading = "lazy";
+    f.referrerPolicy = "no-referrer-when-downgrade";
+    box.appendChild(f);
+    var inner = box.querySelector(".mapbox-in");
+    if (inner) inner.hidden = true;
+    if (window.gtag) window.gtag("event", "map_view", { service: body.getAttribute("data-service") || "general" });
+  });
 })();
