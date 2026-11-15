@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
-OUT = ROOT / "docs"
+OUT = Path(sys.argv[sys.argv.index("--out") + 1]) if "--out" in sys.argv else ROOT / "docs"
 PROD = "--prod" in sys.argv
 SITE = json.loads((SRC / "site.json").read_text(encoding="utf-8"))
 BASE = "" if PROD else SITE["test_base"]  # префикс адресов
@@ -92,6 +92,8 @@ def main():
     OUT.mkdir()
     shutil.copytree(SRC / "assets", OUT / "assets")
     (OUT / ".nojekyll").write_text("")
+    if PROD:
+        (OUT / "CNAME").write_text(DOMAIN.replace("https://", "").replace("http://", "") + "\n")
 
     header_t = (SRC / "partials" / "header.html").read_text(encoding="utf-8")
     footer_t = (SRC / "partials" / "footer.html").read_text(encoding="utf-8")

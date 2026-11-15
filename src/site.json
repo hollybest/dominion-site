@@ -15,10 +15,29 @@
   "redirects": {
     "/auto_repair-es": "/",
     "/shinomontazh-es": "/neumaticos/",
-    "/arenda-podemnika-es": "/puente-elevador/"
+    "/arenda-podemnika-es": "/puente-elevador/",
+    "/auto_repair": "/",
+    "/auto_repair-en": "/",
+    "/auto_repair-de": "/",
+    "/shinomontazh": "/neumaticos/",
+    "/shinomontazh-en": "/neumaticos/",
+    "/shinomontazh-de": "/neumaticos/",
+    "/arenda-podemnika": "/puente-elevador/",
+    "/arenda-podemnika-en": "/puente-elevador/",
+    "/arenda-podemnika-de": "/puente-elevador/",
+    "/es": "/"
   },
   "redirect_anchors": {
     "/auto_repair-es": {
+      "#steps": "#como-trabajamos",
+      "#Remont_es": "#que-hacemos",
+      "#Contakt_es": "#contacto",
+      "#reviews_es": "#opiniones",
+      "#price": "#servicios",
+      "#servis": "#servicios",
+      "#renovar_es": ""
+    },
+    "/auto_repair": {
       "#steps": "#como-trabajamos",
       "#Remont_es": "#que-hacemos",
       "#Contakt_es": "#contacto",
