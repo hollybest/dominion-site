@@ -229,3 +229,6 @@ p{margin:0}
 .card-wide{display:grid;grid-template-columns:1.1fr .9fr;align-items:center}
 .card-wide .card-img{height:100%;aspect-ratio:auto;object-fit:cover}
 @media(max-width:860px){.card-wide{grid-template-columns:1fr}.card-wide .card-img{aspect-ratio:3/2;height:auto}}
+.fig{margin:36px 0 0;max-width:960px}
+.vid{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:var(--r);background:#000}
+.fig figcaption{margin-top:10px;font-size:14px;color:var(--muted,#5b6470)}
