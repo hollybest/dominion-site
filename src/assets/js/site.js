@@ -11,7 +11,7 @@
     });
   }
 
-  /* Google Analytics: solo en el dominio real. El consentimiento por defecto es "denegado". */
+  /* Google Analytics: solo en el dominio real. Medición activa por defecto; "Rechazar" la desactiva. */
   var gaId = body.getAttribute("data-ga");
   if (body.getAttribute("data-analytics") === "1" && gaId) {
     var s = document.createElement("script");
@@ -31,9 +31,8 @@
       if (!b) return;
       var v = b.getAttribute("data-ck");
       try { localStorage.setItem("dm_consent", v); } catch (err) {}
-      if (v === "granted") {
-        window.gtag("consent", "update", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" });
-      }
+      var st = v === "granted" ? "granted" : "denied";
+      window.gtag("consent", "update", { ad_storage: st, ad_user_data: st, ad_personalization: st, analytics_storage: st });
       ck.hidden = true;
     });
   }
