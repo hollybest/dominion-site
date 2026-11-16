@@ -25,7 +25,6 @@
 /* Consent Mode v2: por defecto todo denegado hasta que el visitante acepte. La analítica solo se carga en el dominio real. */
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
-try{var c=localStorage.getItem('dm_consent');if(c==='denied'){gtag('consent','update',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});}}catch(e){}
 gtag('js',new Date());
 </script>
 </head>
@@ -126,10 +125,9 @@ gtag('js',new Date());
   <a class="dm-tel" href="tel:+34685331311"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6a1 1 0 0 1-.25 1l-2.25 2.2Z"/></svg>Llamar</a>
 </div>
 <div class="ck" id="ck" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
-  <p>Usamos cookies de analítica para saber cómo se usa la web y medir nuestra publicidad. Puedes rechazarlas cuando quieras. <a href="/cookies/">Más información</a></p>
+  <p>Usamos cookies de analítica para saber cómo se usa la web y medir nuestra publicidad. <a href="/cookies/">Más información</a></p>
   <div class="ck-act">
-    <button type="button" class="btn btn-line btn-sm" data-ck="denied">Rechazar</button>
-    <button type="button" class="btn btn-dark btn-sm" data-ck="granted">Aceptar</button>
+    <button type="button" class="btn btn-dark btn-sm" data-ck="ok">Entendido</button>
   </div>
 </div>
 
