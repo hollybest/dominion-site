@@ -19,6 +19,7 @@
     s.src = "https://www.googletagmanager.com/gtag/js?id=" + gaId;
     document.head.appendChild(s);
     window.gtag("config", gaId);
+    window.gtag("config", "AW-17896328018");
   }
 
   /* Aviso de cookies */
